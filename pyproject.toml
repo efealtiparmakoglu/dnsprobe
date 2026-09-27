@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnsprobe"
+version = "1.0.0"
+description = "Educational DNS resolver: hand-built packets, iterative referral walking, TTL cache, packet dump. Zero dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["dns", "resolver", "rfc1035", "network", "cli", "educational"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: System :: Networking",
+]
+
+[project.scripts]
+dnsprobe = "dnsprobe.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dnsprobe*"]
